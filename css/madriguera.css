@@ -1,0 +1,130 @@
+     body {
+            background-color: #fdeff9;
+            background-image: url('https://media1.tenor.com/m/noDvqq4NAa4AAAAC/card-captor-sakura-cherry-blossom.gif');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #heart {
+            cursor: pointer;
+            width: 800px;
+            height: 100px;
+            background-image: url('/FB_IMG_1704941406660.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 50% 90%, 0% 100%, 0% 35%);
+            transition: transform 0.5s;
+        }
+        #message {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s, transform 0.5s;
+            transform: translateY(-100px);
+            text-align: center;
+            color: black;
+            position: relative;
+        }
+        #message h2 {
+            display: inline-block;
+            max-width: 600px;
+        }
+        #close-button {
+            position: absolute;
+            top: -10%;
+            left: -10px;
+            background-color: #ff99cc;
+            border: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-50%);
+        }
+        #gif-container {
+            display: none;
+            justify-content: space-between;
+            transform: translateY(-100px);
+            transition: transform 0.3s ease-in-out;
+        }
+        .love-gif {
+            width: 200px;
+            height: 200px;
+        }
+        .heart-clicked {
+            transform: scale(0.8);
+        }
+        .heart-clicked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('/FB_IMG_1704941406660.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 50% 90%, 0% 100%, 0% 35%);
+            animation: splash 1s infinite;
+        }
+        @keyframes splash {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        #message h2 {
+    max-height: 300px;       
+    overflow-y: auto;
+    padding-right: 10px;    
+}
+
+
+#message h2::-webkit-scrollbar {
+    width: 10px;
+}
+
+#message h2::-webkit-scrollbar-track {
+    background: #fdeff9;     
+    border-radius: 10px;
+}
+
+#message h2::-webkit-scrollbar-thumb {
+    background-color: #ff66b2;
+    border-radius: 10px;
+    border: 2px solid #fdeff9;
+}
+
+
+#message h2 {
+    scrollbar-width: thin;
+    scrollbar-color: #ff66b2 #fdeff9;
+}
+#message h2 {
+    margin-top: 10px;       
+    padding-top: 5px;   
+}
